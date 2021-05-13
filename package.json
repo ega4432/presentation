@@ -1,0 +1,16 @@
+{
+  "name": "presentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ysmtegsr/presentation.git",
+  "author": "ysmtegsr <38056766+ysmtegsr@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "export": "npx @marp-team/marp-cli --theme-set ./theme/base.css --pdf --allow-local-files -- ./slides/*.md",
+    "preview": "npx @marp-team/marp-cli --theme-set ./theme/base.css --preview --"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^1.0.3"
+  }
+}
