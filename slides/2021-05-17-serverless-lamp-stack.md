@@ -46,6 +46,7 @@ class: slides
 - [ヨッシー(@ysmtegsr)](https://twitter.com/ysmtegsr)
   - ![](../public/icons/github.svg)
   - ![](../public/icons/twitter.svg)
+  - ![](../public/icons/zenn.svg)
 - :police_officer: 防衛大卒の新卒 3 年目の Z 世代
 - :luggage: スクラムマスター、バックエンドエンジニア
 - :eyes: AWS、Laravel、コンテナ、Jamstack
