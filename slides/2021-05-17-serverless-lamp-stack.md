@@ -8,29 +8,38 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 
 ![bg brightness:0.8 contrast:0.5](./../public/cover-serverless-lamp-stack.png)
 
-## Bref と Serverless Framework で作る
-# AWS サーバーレス LAMP スタック
+## サーバーレス初心者による
+# 初めての AWS Lambda
 
 @ysmtegsr
 
 ---
 
+<!-- _class: invert -->
+
+# LT 初登壇 :partying_face:
+
+---
+
 <!--
-header: 'サーバーレス初心者 LT >> Bref と Serverless Framework で作る AWS サーバーレス LAMP スタック'
+header: 'サーバーレス初心者 LT >> サーバーレス初心者による初めての AWS Lambda '
 paginate: true
 class: slides
 -->
 
-## 本日のアジェンダ
+## アジェンダ
 
 1. 自己紹介
-2. 従来の LAMP スタックの課題
-3. AWS サーバーレス LAMP スタックとは
-4. 使用したサービスやライブラリなど
-   - Laravel Sail
-   - Bref
-   - Serverless Framework
-5. まとめ
+
+2. 今日伝えたいこと
+
+3. きっかけ
+
+4. サーバーレスな Laravel アプリケーションを作ってみた
+
+5. 作ってみての所感
+
+6. まとめ
 
 ---
 
@@ -43,7 +52,7 @@ class: slides
 
 ![h:300 w:300](./../public/icons/profile.png)
 
-- [ヨッシー(@ysmtegsr)](https://twitter.com/ysmtegsr)
+- よっしー([@ysmtegsr](https://twitter.com/ysmtegsr))
   - ![](../public/icons/github.svg)
   - ![](../public/icons/twitter.svg)
   - ![](../public/icons/zenn.svg)
@@ -51,7 +60,61 @@ class: slides
 - :luggage: スクラムマスター、バックエンドエンジニア
 - :eyes: AWS、Laravel、コンテナ、Jamstack
 - :heart: 読書、将棋、テニス、筋トレ
-- :page_with_curl: AWS CLF, AWS SAA
+
+---
+
+<!-- _class: invert -->
+
+# 今日伝えたいこと :eyes:
+
+---
+
+# とりあえず触ってみる精神！
+
+---
+
+<!-- _class: invert -->
+
+# これまでの自分 :baby:
+
+---
+
+## これまでの自分
+
+- サーバーレスの良さも分かっているし
+- AWS Lambda についても知ってはいる
+
+でも…
+
+---
+
+## これまでの自分
+
+- サーバーレスの良さも分かっているし
+- AWS Lambda についても知ってはいる
+
+でも…
+
+- 一番よく使っている PHP はサポートはされていない
+- 業務の技術選定されるのかな
+
+---
+
+## これまでの自分
+
+- サーバーレスの良さも分かっているし
+- AWS Lambda についても知ってはいる
+
+でも…
+
+- PHP はサポートはされていない
+- 業務の技術選定されるのかな
+
+そこでたまたま見かけたのが…
+
+---
+
+![bg 80%](./../public/aws_blog_serverless_lamp.jpg)
 
 ---
 
@@ -61,30 +124,7 @@ class: slides
 
 ---
 
-## 従来の LAMP スタック
-
-- 下記のソフトウェア頭文字からなる造語
-  - **L**：**L**inux
-  - **A**：**A**pache HTTP Server、
-  - **M**：**M**ariaDB、**M**ySQL
-  - **P**：**P**HP、**P**erl、**P**ython
-- 動的な Web サイトやアプリケーションの開発
-- OSS = 無償提供 = 無保証
-
----
-
-## 従来の LAMP スタックの課題
-
-- **突発的なアクセス増加**に耐えるスケーラビリティの必要性。
-- **運用や保守、監視**などの仕組み。
-- 常にサーバを立ち上げておくのに発生する**固定費**。
-- その他
-  - セッション管理
-  - 静的コンテンツの配信
-
----
-
-## AWS サーバーレス LAMP スタック
+## サーバーレス LAMP スタック
 
 - 下記のソフトウェア頭文字からなる造語
   - **L**：AWS **L**ambda
@@ -108,142 +148,100 @@ class: slides
 --- -->
 
 <!-- _class: invert -->
-# 作ってみる :rocket:
+# やってみた :rocket:
 
 ---
 
-## ローカル環境
+## ライブラリの導入
 
-[Laravel Sail](https://readouble.com/laravel/8.x/ja/sail.html) を使って Docker 環境を 2 撃で立ち上げる。
+#### :star: Bref
 
-- Laravel アプリケーションを Docker 上で動作させるための軽量 CLI
-- docker-compose.yml と Sail スクリプトからなる
+AWS Lambda 上で PHP を簡単に動作させるための便利ツール。
 
+#### :star: laravel-bridge
 
-```sh
-$ curl -s "https://laravel.build/<PROJECT_NAME>" | bash && cd <PROJECT_NAME>
-
-$ ./vendor/bin/sail up -d
-# docker-compose up -d と同様
-```
+Laravel を Lambda 用に動作するようにしてくれる便利ツール。
 
 ---
 
-## Bref の導入
+## インフラの構築とデプロイ
 
-AWS Lambda 上で Laravel や Symfony などの PHP フレームワークを簡単に動作させるための便利ツール。
+#### :star: Serverless Framework
 
-1. ライブラリのインストール
-
-```sh
-$ ./vendor/bin/sail composer require bref/bref bref/laravel-bridge
-```
-
-2. Serverless Framework 用の YAML ファイルを生成
-
-```sh
-$ ./vendor/bin/sail artisan vendor:publish --tag=serverless-config
-Copied File [/vendor/bref/laravel-bridge/config/serverless.yml] To [/serverless.yml]
-Publishing complete.
-```
-
----
-
-## Serverless Framework で構築
-
-Serverless Framework とは、**サーバーレスアプリケーションの構築、管理、デプロイをするためのツール**
-
-1. serverless.yml の確認
-<!-- 2. Laravel 設定を微修正 -->
-2. Serverless Framework CLI でデプロイ
-
----
-
-### serverless.yml 確認(1)
-
-```yaml
-service: sample-laravel
-provider: # {  AWS | GCP | Azure } など、どのプロバイダを使うか
-  name: aws
-  region: us-east-1 # AWS リージョン
-  stage: dev  # { dev | stg | prod } などの環境を指定
-  runtime: provided.al2
-package: # デプロイパッケージ
-  exclude:
-    - node_modules/**
-    - public/storage
-    - resources/assets/**
-    - storage/**
-    - tests/**
-...
-```
-
----
-
-### serverless.yml 確認(2)
-
-```yml
-...
-# Lambda 関数
-functions:
-  web:
-    handler: public/index.php
-    timeout: 28 # API Gateway のタイムアウト時間が 29 秒
-    layers:
-      - ${bref:layer.php-80-fpm}
-    events: # API Gateway を Lambda 関数のトリガーにする
-      - httpApi: '*'
-
-plugins:
-  - ./vendor/bref/bref
-```
-
----
-
-### Serverless Framework でデプロイ
+- サーバーレスアプリケーションの構築、管理、デプロイをするためのツール。
+- CLI で操作が可能。
 
 ```sh
 $ serverless deploy
-
-service: sample-laravel
-stage: dev
-region: us-east-1
-stack: sample-laravel-dev
-resources: 11
-endpoints:
-  ANY - https://uksl8vejck.execute-api.us-east-1.amazonaws.com
-functions:
-  web: sample-laravel-dev-web
 
 Stack Outputs
 WebLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:648608884667:function:sample-laravel-dev-web:1
 HttpApiId: abc12defg
 ServerlessDeploymentBucketName: sample-laravel-dev-serverlessdeploymentbucket-123abc456defg
-HttpApiUrl: https://abc12defg.execute-api.us-east-1.amazonaws.com  # ← アクセス !!
+HttpApiUrl: https://abc12defg.execute-api.us-east-1.amazonaws.com
 ```
-
----
-
-![bg 75%](./../public/serverless-laravel.jpg)
 
 ---
 
 <!-- _class: invert -->
 
-# 構築してみての所感:thinking:
+# 作ったもの
+
+---
+
+<!-- _class: invert -->
+
+### Welcome ページ
+
+![bg ](./../public/serverless-laravel.jpg)
+
+---
+
+### GET /sample
+
+```sh
+$ curl https://vnt27c2h3j.execute-api.ap-northeast-1.amazonaws.com/sample | jq .
+
+{
+  "message": "Hello World!"
+}
+```
+
+---
+
+### GET /users
+
+```sh
+$ curl https://vnt27c2h3j.execute-api.ap-northeast-1.amazonaws.com/users | jq '.user[] | .name'
+
+"Buford Gerhold"
+"Stuart Daniel"
+"River Rath"
+"Ryann Kessler"
+"Erin Jones DVM"
+"Rylee Toy"
+"Evalyn Hammes"
+"Stone Hettinger"
+"Lupe Langosh"
+"Agustin Parisian"
+```
+
+---
+
+<!-- _class: invert -->
+
+# 作ってみての所感 :thinking:
 
 
 ---
 
-
-構築してみての所感
+## 作ってみての所感
 
 - 構築、デプロイの容易さ
-  - Bref や Serverless Framework の存在
-- 課題
-  - serverless.yml はファイルを分割する
-  - Lambda と Fargate の使い分けの判断
-  - ローカル環境をどう作るか
+
+- サーバーレスのメリットを肌で感じた
+  - 実装に集中できる
+  - コストパフォーマンス
 
 ![bg right:35%](./../public/thinking-men.jpg)
 
@@ -257,13 +255,11 @@ HttpApiUrl: https://abc12defg.execute-api.us-east-1.amazonaws.com  # ← アク�
 
 ## まとめ
 
-- AWS サーバーレス LAMP スタック
-  1. **ハイスケーラビリティ**
-  2. **運用負荷も小さく**抑えられ
-  3. **コストパフォーマンスが高い** 未来の LAMP スタック
-- AWS Lambda で PHP フレームワークを使う時は **Bref** が便利
-- Serverless Framework は**インフラのコード化**と**デプロイの容易さ**の両方を提供してくれる優れもの
-- 場合に応じたアーキテクチャ選定を
+- AWS Lambda は**好きな言語**で始めよう！
+
+- 雰囲気掴むのには**とりあえず触ってみる精神**が大事！
+
+- 何事も行動あるのみ（自戒を込めて）
 
 ---
 
