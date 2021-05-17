@@ -11,7 +11,8 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 ## サーバーレス初心者による
 # 初めての AWS Lambda
 
-@ysmtegsr
+よっしー(@ysmtegsr)
+Serverless LT初心者向け LT大会
 
 ---
 
@@ -22,7 +23,7 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 ---
 
 <!--
-header: 'サーバーレス初心者 LT >> サーバーレス初心者による初めての AWS Lambda '
+header: 'サーバーレス初心者による初めての AWS Lambda '
 paginate: true
 class: slides
 -->
@@ -107,7 +108,7 @@ class: slides
 
 でも…
 
-- PHP はサポートはされていない
+- 一番よく使っている PHP はサポートはされていない
 - 業務の技術選定されるのかな
 
 そこでたまたま見かけたのが…
