@@ -16,7 +16,7 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 ---
 
 <!--
-header: '効率よく成長するために自分の強みを知る方法'
+header: '新機能紹介！CloudFront Functions を触ってみた'
 paginate: true
 class: slides
 -->
