@@ -117,3 +117,10 @@ section.slides > h1, h2, ul, li {
 section.center {
   text-align: center;
 }
+
+img[alt~="center"] {
+  display: block;
+  padding-top: 1rem;
+  margin: 0 auto;
+  width: 80%;
+}
