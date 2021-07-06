@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "export": "npx @marp-team/marp-cli --theme-set ./theme/base.css --pdf --allow-local-files -- ./slides/*.md",
+    "export": "npx @marp-team/marp-cli --theme-set ./theme/base.css --pdf --allow-local-files --",
     "preview": "npx @marp-team/marp-cli --theme-set ./theme/base.css --preview --"
   },
   "devDependencies": {

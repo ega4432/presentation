@@ -59,15 +59,6 @@ class: slides
 
 ---
 
-<style>
-img[alt~="center"] {
-  display: block;
-  padding-top: 1rem;
-  margin: 0 auto;
-  width: 80%;
-}
-</style>
-
 ## Lambda@Edge とは
 
 エッジで Lambda 関数を実行できる機能。
@@ -81,15 +72,6 @@ img[alt~="center"] {
 # CloudFront Functions とは
 
 ---
-
-<style>
-img[alt~="center"] {
-  display: block;
-  padding-top: 1rem;
-  margin: 0 auto;
-  width: 80%;
-}
-</style>
 
 ## CloudFront Functions とは
 
