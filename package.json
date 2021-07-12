@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "export": "npx @marp-team/marp-cli --theme-set ./theme/base.css --pdf --allow-local-files --",
-    "preview": "npx @marp-team/marp-cli --theme-set ./theme/base.css --preview --"
+    "preview": "npx @marp-team/marp-cli --theme-set ./theme/base.css --preview -- ./slides --unhandled-rejections=strict",
+    "clear": "rm -rf ./slides/*.html ./slides/*.pdf"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^1.0.3"
