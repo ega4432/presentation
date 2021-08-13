@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="_zDcFEvN2WbuJxCCOdh0" name="ページ1">
+        <mxGraphModel dx="708" dy="566" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFF8E1" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://2.bp.blogspot.com/-p4C7TeJzZzc/UbVvVwUV7oI/AAAAAAAAUvc/4g32Z36u-ng/s800/tenbin.png;" vertex="1" parent="1">
+                    <mxGeometry x="82" y="343" width="327.82" height="214.35" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#666666&quot; style=&quot;font-size: 15px&quot;&gt;仕組みを作る&lt;br&gt;時間&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="235" y="357" width="103" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font color=&quot;#666666&quot; style=&quot;font-size: 15px&quot;&gt;メンテナンス&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="347" y="359" width="96" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font color=&quot;#666666&quot; style=&quot;font-size: 15px&quot;&gt;SaaS&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="104" y="309" width="95" height="63" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font color=&quot;#666666&quot; style=&quot;font-size: 15px&quot;&gt;機会損失&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="348" y="283" width="94" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font color=&quot;#666666&quot;&gt;&lt;span style=&quot;font-size: 15px&quot;&gt;エンジニアの&lt;br&gt;賃金&lt;/span&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="236.5" y="281" width="100" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
