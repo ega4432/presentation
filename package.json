@@ -2,8 +2,8 @@
   "name": "presentation",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:ysmtegsr/presentation.git",
-  "author": "ysmtegsr <38056766+ysmtegsr@users.noreply.github.com>",
+  "repository": "git@github.com:ega4432/presentation.git",
+  "author": "ega4432 <38056766+ega4432@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
   "scripts": {

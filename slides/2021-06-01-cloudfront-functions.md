@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: base
-footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
+footer: '2021 ©︎ [ega4432](https://twitter.com/ega4432) - Built with marp.'
 ---
 
 <!-- _class: cover lead invert -->
@@ -11,7 +11,7 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 ## 新機能紹介！
 # CloudFront Functions を触ってみた
 
-よっしー(@ysmtegsr)
+えが(@ega4432)
 
 ---
 
