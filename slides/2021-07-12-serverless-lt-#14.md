@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: base
-footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
+footer: '2021 ©︎ [ega4432](https://twitter.com/ega4432) - Built with marp.'
 ---
 
 <!-- _class: cover lead -->
@@ -11,7 +11,7 @@ footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
 ## サーバーレスな技術を使って
 # オフィス業務を改善した話
 
-よっしー(@ysmtegsr)
+えが(@ega4432)
 Serverless LT初心者向け LT大会
 
 ---
@@ -20,7 +20,7 @@ Serverless LT初心者向け LT大会
 
 ![h:300 w:300](./../public/icons/profile.png)
 
-- よっしー([@ysmtegsr](https://twitter.com/ysmtegsr))
+- えが([@ega4432](https://twitter.com/ega4432))
   - ![](../public/icons/github.svg)
   - ![](../public/icons/twitter.svg)
   - ![](../public/icons/zenn.svg)

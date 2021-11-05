@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: base
-footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
+footer: '2021 ©︎ [ega4432](https://twitter.com/ega4432) - Built with marp.'
 ---
 
 <style>
@@ -23,7 +23,7 @@ section.wrap p {
 
 # 監視についてみんなに知って欲しいこと
 
-よっしー(@ysmtegsr)
+えが(@ega4432)
 
 ---
 

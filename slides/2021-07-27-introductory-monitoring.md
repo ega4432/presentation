@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: base
-footer: '2021 ©︎ [ysmtegsr](https://twitter.com/ysmtegsr) - Built with marp.'
+footer: '2021 ©︎ [ega4432](https://twitter.com/ega4432) - Built with marp.'
 ---
 
 <style>
@@ -24,7 +24,7 @@ section.wrap p {
 ## - vol. 2 -
 # 監視についてみんなに知って欲しいこと
 
-よっしー(@ysmtegsr)
+えが(@ega4432)
 
 ---
 
@@ -59,7 +59,7 @@ class: slides
 
 前回の話
 
-- 導入編：https://speakerdeck.com/ysmtegsr/introductory-monitoring
+- 導入編：https://speakerdeck.com/ega4432/introductory-monitoring
 
 ![bg 90% right:20%](./../public/introductory_monitoring.jpg)
 
